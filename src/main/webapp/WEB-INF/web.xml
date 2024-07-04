@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    xmlns="https://jakarta.ee/xml/ns/jakartaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+    version="6.0">
+    
+	<context-param>
+		<param-name>VIEW_FILE_PATH</param-name>
+		<param-value>viewSiteMap.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>SERVLET_FILE_PATH</param-name>
+		<param-value>servletSiteMap.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>AUTHENTICATION_FILE_PATH</param-name>
+		<param-value>authentication.properties</param-value>
+	</context-param>
+	
+	<listener>
+		<description>ServletContextListener</description>
+		<listener-class>bakery.listener.BakeryShopListener</listener-class>
+	</listener>
+	
+	
+	<error-page>
+		<error-code>400</error-code>
+		<location>/views/error_404.html</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/views/error_500.html</location>
+	</error-page>
+	
+</web-app>
