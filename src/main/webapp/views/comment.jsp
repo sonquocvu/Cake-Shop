@@ -1,7 +1,7 @@
 <%-- Document : top_recipe Created on : Sep 25, 2022, 5:19:05 PM Author : LamVo --%>
 
     <%@page import="bakeryRecipe.comment_tbl.Comment_tblDTO" %>
-        <%@page contentType="text/html" pageEncoding="UTF-8" %>
+        <%@ page contentType="text/html;charset=UTF-8" language="java" %>
             <%@taglib uri="jakarta.tags.core" prefix="c" %>
                 <!DOCTYPE html>
                 <html>

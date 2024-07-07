@@ -1,4 +1,4 @@
-package bakery.utils;
+package com.sonvu.bakery.utils;
 
 public class FeatureMapping {
 	

@@ -1,4 +1,4 @@
-package bakery.utils;
+package com.sonvu.bakery.utils;
 
 import java.io.IOException;
 import java.io.InputStream;
