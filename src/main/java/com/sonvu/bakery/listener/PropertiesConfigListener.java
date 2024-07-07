@@ -10,12 +10,17 @@ import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /**
  * Application Lifecycle Listener implementation class BakeryShopListener
  *
  */
 @WebListener
 public class PropertiesConfigListener implements ServletContextListener {
+	
+	private final static Logger logger = LogManager.getLogger(PropertiesConfigListener.class);
 	
 	@Override
 	public void contextInitialized(ServletContextEvent event)
@@ -34,10 +39,12 @@ public class PropertiesConfigListener implements ServletContextListener {
 			// Set attribute to context to serve user
 			context.setAttribute("ViewMap", viewMapProperties);
 			context.setAttribute("AuthenMap", authenMapProperties);
+			
+			logger.info("Initialize PropertiesConfigListener successuflly");
 		}
 		catch (IOException e)
 		{
-			System.out.println("Properties Configuration Listener hasn't been initialized " + e.getMessage());
+			logger.info("Properties Configuration Listener hasn't been initialized " + e.getMessage());
 		}
 	}
 	

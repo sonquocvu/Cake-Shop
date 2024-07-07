@@ -4,7 +4,8 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 
-//import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.apache.logging.log4j.LogManager;
 
 public class Log4jConfigListener implements ServletContextListener {
 
@@ -15,8 +16,8 @@ public class Log4jConfigListener implements ServletContextListener {
 			
 			String log4jFile = context.getInitParameter("Log4j2_FilePath");
 			
-			//Configurator.initialize(null, fullPath);
-			System.out.println("Log4j2 Listener has been initialized with configuration file: " + log4jFile);
+			Configurator.initialize(null, log4jFile);
+			LogManager.getLogger(Log4jConfigListener.class).info("Initialize the Log4j Listener successfully");
 		}
 		
 		@Override

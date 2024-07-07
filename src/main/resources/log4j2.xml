@@ -3,25 +3,26 @@
 <Configuration status="INFO">
 
 	<Appenders>
-		<Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		<Console name="ConsoleAppender" target="SYSTEM_OUT">
+			<PatternLayout pattern="%msg%n" />
 			<Filters>
-				<ThresholdFiler level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+				<ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
 			</Filters>
 		</Console>
 		
-		<File name="File" fileName="log/Bakery-application.log">
+		<File name="FileAppender" fileName="E:\Java\logs\bakery-shop\application.log">	<!-- Change log path corresponding to your environment -->
 			<PatternLayout pattern="%d{yyy-MM-DD HH:mm:ss} [%t] %-5level %logger{36} - %msg%n"/>
 			<Filters>
-				<TheasholdFiler level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+				<ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
 			</Filters>
 		</File>
+        		
 	</Appenders>
 	
 	<Loggers>
 		<Root level="trace">
-			<AppenderRef ref="Console"/>
-			<AppenderRef ref="File"/>
+			<AppenderRef ref="ConsoleAppender"/>
+			<AppenderRef ref="FileAppender"/>
 		</Root>
 	</Loggers>
 		

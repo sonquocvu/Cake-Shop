@@ -64,29 +64,24 @@
 
 ##I would like to descripte step by step to configure the project using Maven in Eclipse
 
-1. Install the latest JDK, Eclipse, Maven and Tomcat server version (or whatever version you want)
+ - Install the latest JDK, Eclipse, Maven and Tomcat server version (or whatever version you want)
 
-2. Import the bakery-shop project to the Eclipse
+ - Import the bakery-shop project to the Eclipse
 
-3. Adjust the Maven compiler source in pom.xml file corresponding to the installed JDK verion on your environment
-->EX:
+ - Adjust the Maven compiler source in pom.xml file corresponding to the installed JDK verion on your environment
 
-->Before:
+    - Before (The default JDK version):
 
-<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-</properties>
+        - <maven.compiler.source>1.7</maven.compiler.source>
+        - <maven.compiler.target>1.7</maven.compiler.target>
 
-->After (The current JDK version on my environment is 22):
+    - After (The current JDK version on my environment is 22):
 
-<properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>22</maven.compiler.source>
-    <maven.compiler.target>22</maven.compiler.target>
-</properties>
+        - <maven.compiler.source>22</maven.compiler.source>
+        - <maven.compiler.target>22</maven.compiler.target>
+		
+ - Check the Dynamic Web Module and Java version in Project Facets (make sure they're using the same version with install JDK)
 
-4. Adjust the dependencies version in pom.xml file to the latest version (or whatever version you want)
+ - Adjust the dependencies version in pom.xml file to the latest version (or whatever version you want)
 
-5. Add Tomcat server to the project (refer guidline on Google)
+ - Add Tomcat server to the project (refer guidline on Google)

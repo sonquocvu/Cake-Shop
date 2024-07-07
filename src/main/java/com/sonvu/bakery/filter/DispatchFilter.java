@@ -13,17 +13,17 @@ import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.util.Properties;
 
-//import org.apache.logging.log4j.LogManager;
-//import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class DispatchFilter implements Filter
 {
-	//private static final Logger logger = LogManager.getLogger(DispatchFilter.class);
+	private static final Logger logger = LogManager.getLogger(DispatchFilter.class);
 	private FilterConfig filterConfig = null;
 	
 	public DispatchFilter()
 	{
-		//logger.trace("Construct the Dispatcher object");
+		logger.trace("Construct the Dispatcher object");
 	}
 	
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain)
@@ -31,8 +31,7 @@ public class DispatchFilter implements Filter
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
 		String uri = request.getRequestURI();
 		String url = null;
-		//logger.info("The URI from the request: " + uri.toString());
-		System.out.println("The request URI: " + uri);
+		logger.info("The URI from the request: " + uri.toString());
 		
 		try
 		{
@@ -43,7 +42,7 @@ public class DispatchFilter implements Filter
 			int lastIndex = uri.lastIndexOf("/"); 			// Example: https://localhost.com:8080/home
 			String viewName = uri.substring(lastIndex + 1); // --> gain "home"
 			url = viewMap.getProperty(viewName);
-			System.out.println("The request URL: " + url);
+			logger.info("The mapping view: " + url);
 			
 			if (url != null)
 			{
@@ -57,11 +56,11 @@ public class DispatchFilter implements Filter
 		}
 		catch (ServletException ex)
 		{
-			//logger.info("Unable to trigger the filter for dispatcher due to ServletExeption - " + ex.getMessage());
+			logger.info("Unable to trigger the filter for dispatcher due to ServletExeption - " + ex.getMessage());
 		}
 		catch (IOException ex)
 		{
-			//logger.info("Unable to trigger the filter for dispatcher due to IOException - " + ex.getMessage());
+			logger.info("Unable to trigger the filter for dispatcher due to IOException - " + ex.getMessage());
 		}
 	}
 	
@@ -70,7 +69,7 @@ public class DispatchFilter implements Filter
 		this.filterConfig = filterConfig;
 		if (this.filterConfig != null)
 		{
-			//logger.info("Initialize DispatchFilter successfully");
+			logger.info("Initialize DispatchFilter successfully");
 		}
 	}
 	
