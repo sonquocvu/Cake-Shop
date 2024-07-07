@@ -112,7 +112,7 @@
                     <c:forEach var="categoryDto" items="${categoryList}">
                         <li>
                             <a href="#${categoryDto.categoryId}">${categoryDto.name}
-                                <span>${categoryDto.countNum}</span>
+                                <span>${categoryDto.numOfCategory}</span>
                             </a>
                         </li>
                     </c:forEach>

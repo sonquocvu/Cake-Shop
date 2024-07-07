@@ -1,5 +1,8 @@
 package com.sonvu.bakery.controller;
 
+import com.sonvu.bakery.model.category.CategoryDTO;
+import com.sonvu.bakery.model.category.CategoryDAO;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -27,15 +30,20 @@ public class LoadHomePageController extends HttpServlet {
 		throws ServletException, IOException
 	{
 		response.setContentType("text/html;charset=UTF-8");
+		HttpSession session = request.getSession();
 		
 		try
 		{
 			logger.info("Handle request for LoadHomePageController");
+			CategoryDAO categoryModel = new CategoryDAO();
+			categoryModel.loadAllCategories();
+			List<CategoryDTO> categories = categoryModel.getListOfCategories();
+			session.setAttribute("ALL_CATEGORY", categories);
 		}
-//		catch (ServletException e)
-//		{
-//			logger.info(e.getMessage());
-//		}
+		catch (SQLException e)
+		{
+			logger.info(e.getMessage());
+		}
 		finally
 		{
 			logger.info("Handle request for LoadHomePageController successfully");
