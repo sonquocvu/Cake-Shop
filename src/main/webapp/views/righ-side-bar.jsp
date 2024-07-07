@@ -24,12 +24,12 @@
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <!-- Custom Css -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <!--ThongNT custom css-->
         <link rel="stylesheet" href="css/custom/homepage.css">
     </head>
     <body>
-    <c:import url="LoadHomePageController"></c:import>
+    <c:import url="/LoadHomePageController"></c:import>
     <div class="col-lg-3 sidebar-widget-area sidebar-break-md">                                                
         <!--Top 5 Recipes-->
         <div class="widget right-side-top-5-recipes" style="padding: 5px">          

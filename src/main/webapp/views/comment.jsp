@@ -29,7 +29,7 @@
                     <link rel="stylesheet" href="css/owl.carousel.min.css">
                     <link rel="stylesheet" href="css/owl.theme.default.min.css">
                     <!-- Custom Css -->
-                    <link rel="stylesheet" href="style.css">
+                    <link rel="stylesheet" href="css/style.css">
                     <!-- Modernizr Js -->
                     <script src="js/modernizr-3.6.0.min.js"></script>
                 </head>

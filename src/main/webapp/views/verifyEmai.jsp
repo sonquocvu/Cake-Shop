@@ -28,7 +28,7 @@
         <!-- Flaticon CSS -->
         <link rel="stylesheet" href="fonts/flaticon.css">
         <!-- Custom Css -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <!-- Modernizr Js -->
         <script src="js/modernizr-3.6.0.min.js"></script>
 

@@ -31,7 +31,7 @@
                 <link rel="stylesheet"
                     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css">
                 <!-- Custom Css -->
-                <link rel="stylesheet" href="style.css">
+                <link rel="stylesheet" href="css/style.css">
                 <link rel="stylesheet" href="css/custom/report.css">
                 <!-- ToolTip -->
                 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>

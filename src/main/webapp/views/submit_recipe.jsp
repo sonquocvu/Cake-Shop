@@ -38,7 +38,7 @@
         <!-- Select 2 CSS -->
         <link rel="stylesheet" href="css/select2.min.css">
         <!-- Custom Css -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <!-- Modernizr Js -->
         <script src="js/modernizr-3.6.0.min.js"></script>
         <!--Css file for tag-->
